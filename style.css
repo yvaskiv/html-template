@@ -32,6 +32,23 @@ body {
   border-radius: 2px;
 }
 
+.burger {
+  display: none;
+}
+
+@media only screen and (max-width: 1350px) {
+  .container {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+
+@media only screen and (max-width: 1120px) {
+  .burger {
+    display: block;
+  }
+}
+
 /* <Common /> */
 
 /* <HEADER> */
@@ -112,6 +129,12 @@ header {
   align-items: center;
 }
 
+@media only screen and (max-width: 1120px) {
+  .header__options nav, .header__language {
+    display: none;
+  }
+}
+
 /* <HEADER /> */
 
 /*  <HERO>  */
@@ -130,7 +153,6 @@ header {
   margin: 0;
   font-size: 48px;
   color: var(--main-green);
-  line-height: 120px;
 }
 
 .hero h2 {
@@ -141,7 +163,7 @@ header {
 
 .hero p {
   margin-bottom: 50px;
-  width: 536px;
+  max-width: 536px;
   font-size: 14px;
   line-height: 150%;
 }
@@ -150,6 +172,31 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media only screen and (max-width: 1350px) {
+  .hero img {
+    height: 80%;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .hero p {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header__search {
+    display: none;
+  }
 }
 
 /*  <HERO />  */
@@ -189,6 +236,24 @@ header {
 
 .about__box a {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 992px) {
+  .about__wrapper {
+    flex-direction: column;
+  }
+  .about__box {
+    width: fit-content;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about__box {
+    flex-direction: column;
+  }
+  .about__box img {
+    width: 100%;
+  }
 }
 
 /*  <About />  */
@@ -345,6 +410,86 @@ form {
   right: 0;
 }
 
+@media only screen and (max-width: 1220px) {
+  .contact__info h2 {
+    font-size: 36px;
+  }
+  .contact__form__personal_info__box input {
+    width: 90%;
+  }
+  .contact__form__radio_buttons {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .contact__content {
+    flex-direction: column;
+    height: 100%;
+  }
+  .contact__info {
+    background-image: none;
+    background-color: var(--main-gray);
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px
+  }
+  .contact__info ul {
+    margin: 0;
+  }
+  .contact__social_media {
+    margin: 0;
+    gap: 16px;
+    flex-direction: column;
+  }
+  .contact__form__checkboxes {
+    padding-bottom: 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact__form__personal_info__box {
+    width: 94%;
+  }
+  .contact__form__personal_info__box input {
+    width: 100%;
+  }
+  .contact__form__radio_buttons {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+  .contact__content {
+    min-width: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact__info {
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 505px) {
+  .contact__form__personal_info {
+    width: fit-content;
+    gap: 18px;
+  }
+  .contact__social_media {
+    flex-direction: row;
+  }
+  .contact__form__personal_info__box input {
+    width: 90%;
+  }
+  .contact__form__radio_buttons {
+    width: fit-content;
+    flex-direction: column;
+  }
+  .contact__form__checkboxes {
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+
 /* <Contact /> */
 
 /* <Footer> */
@@ -421,6 +566,54 @@ footer nav ul {
   opacity: 0.6;
   gap: 15px;
   list-style: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .footer__wrapper {
+    flex-wrap: wrap;
+  }
+  .footer__subscription {
+    width: 100%;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .footer__wrapper nav, .footer__contacts {
+    width: 50%;
+    text-align: center;
+  }
+  .footer__contacts__cards {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer__outer {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+  .footer__outer ul {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 505px) {
+  .footer__subscription {
+    gap: 30px;
+  }
+  .footer__subscription input {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  .footer__wrapper nav, .footer__contacts {
+    width: 100%;
+  }
+  .footer__wrapper nav ul {
+    padding: 0;
+  }
+  .footer__contacts {
+    margin-top: 40px;
+  }
 }
 
 /* <Footer /> */
