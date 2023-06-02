@@ -264,7 +264,7 @@ header {
     flex-direction: column;
   }
   .about__box img {
-    width: 100%;
+    align-self: flex-start;
   }
 }
 
