@@ -246,6 +246,7 @@ header {
 }
 
 .about__box a {
+  color: var(--main-white);
   text-decoration: underline;
 }
 
