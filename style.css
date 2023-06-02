@@ -32,6 +32,15 @@ body {
   border-radius: 2px;
 }
 
+.std-button::hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
 .burger {
   display: none;
 }
@@ -84,7 +93,8 @@ header {
 .header__options nav ul li {
   padding-right: 16px;
   font-size: 18px;
-  border-right: 1.5px solid var(--main-black)
+  border-right: 1.5px solid var(--main-black);
+  cursor: pointer;
 }
 
 .header__language {
@@ -93,6 +103,7 @@ header {
   border: none;
   font-family: 'Outfit', sans-serif;
   font-size: 18px;
+  outline: none;
 }
 
 .header__search {
@@ -523,6 +534,12 @@ footer nav ul {
   flex-direction: column;
   gap: 18px;
   list-style: none;
+}
+
+footer nav ul li a {
+  color: var(--main-black);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .footer__contacts {
